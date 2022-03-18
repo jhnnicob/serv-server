@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_account"
+        app:navigationIcon="@drawable/ic_back"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/title_customer"
+        app:titleTextAppearance="@style/PoppinsTextMediumSemiBoldStyle" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <TextView
+                    android:id="@+id/textViewCustomerName"
+                    style="@style/PoppinsTextMediumStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Customer Name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewCode"
+                    style="@style/PoppinsTextSmallStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_border_bottom"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="Code"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewCustomerName"
+                    app:layout_constraintStart_toStartOf="@+id/textViewCustomerName"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCustomerName" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:weightSum="6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCode">
+
+                    <ImageView
+                        android:id="@+id/imageViewLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_location"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewCityProvince"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textViewCityProvince" />
+
+                    <TextView
+                        android:id="@+id/textViewCityProvince"
+                        style="@style/PoppinsTextMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="City, Province"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewAddress"
+                        style="@style/PoppinsTextMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        app:layout_constraintEnd_toEndOf="@id/textViewCityProvince"
+                        app:layout_constraintStart_toStartOf="@+id/textViewCityProvince"
+                        app:layout_constraintTop_toBottomOf="@id/textViewCityProvince" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutStore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:weightSum="6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutLocation">
+
+                    <ImageView
+                        android:id="@+id/imageViewStore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_store"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewStoreType"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textViewStoreType" />
+
+                    <TextView
+                        android:id="@+id/textViewStoreType"
+                        style="@style/PoppinsTextMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Store Type"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewStore"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutContactPerson"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:weightSum="6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutStore">
+
+                    <ImageView
+                        android:id="@+id/imageViewContactPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_contact_person"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewContactPerson"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textViewContactPerson" />
+
+                    <TextView
+                        android:id="@+id/textViewContactPerson"
+                        style="@style/PoppinsTextMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Contact Person"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewContactPerson"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayoutContacts"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:weightSum="6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayoutContactPerson">
+
+                    <ImageView
+                        android:id="@+id/imageViewContacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:src="@drawable/ic_contact"
+                        app:layout_constraintBottom_toBottomOf="@+id/textViewContact1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textViewContact1" />
+
+                    <TextView
+                        android:id="@+id/textViewContact1"
+                        style="@style/PoppinsTextMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Contact 1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewContacts"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewContact2"
+                        style="@style/PoppinsTextMediumStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Contact 2"
+                        app:layout_constraintEnd_toEndOf="@id/textViewContact1"
+                        app:layout_constraintStart_toStartOf="@+id/textViewContact1"
+                        app:layout_constraintTop_toBottomOf="@id/textViewContact1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textViewSalesHistory"
+                    style="@style/PoppinsTextMediumStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sales History"
+                    app:layout_constraintBottom_toBottomOf="@+id/buttonNewOrder"
+                    app:layout_constraintEnd_toStartOf="@+id/buttonNewOrder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/buttonNewOrder" />
+
+                <Button
+                    android:id="@+id/buttonNewOrder"
+                    style="@style/PoppinsButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_add"
+                    android:drawablePadding="8dp"
+                    android:text="@string/title_new_order"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewOrderHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonNewOrder"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

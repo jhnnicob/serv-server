@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.order.OrderListFragment"
+        android:animateLayoutChanges="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/menu_order_list"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/title_order"
+            app:titleTextAppearance="@style/PoppinsTextMediumSemiBoldStyle" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFiltersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0.0px"
+            android:elevation="8dp"
+            android:visibility="gone"
+            app:cardElevation="8dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/PoppinsTextSmallStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Date Range"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutStartDate"
+                    app:layout_constraintEnd_toStartOf="@+id/textInputLayoutStartDate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:layout_constraintEnd_toStartOf="@+id/textInputLayoutEndDate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextStartDate"
+                        style="@style/PoppinsTextSmallStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Start Date"
+                        android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutEndDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayoutStartDate"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextEndDate"
+                        style="@style/PoppinsTextSmallStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="End Date"
+                        android:inputType="date" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutCustomer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayoutStartDate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextCustomer"
+                        style="@style/PoppinsTextSmallStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Customer"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCustomer">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextCity"
+                        style="@style/PoppinsTextSmallStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="City"
+                        android:inputType="textPostalAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutProvince"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextInputLayoutStyle"
+                    app:endIconMode="clear_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextProvince"
+                        style="@style/PoppinsTextSmallStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Province"
+                        android:inputType="textPostalAddress" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    style="@style/PoppinsTextSmallStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:drawableStart="@drawable/ic_clear"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:drawableTint="@color/colorAccent"
+                    android:text="Clear Filters"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayoutProvince" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewFiltersContainer">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:nestedScrollingEnabled="false" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonAddNewOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:contentDescription="Add New Order"
+        android:focusable="true"
+        android:text="Add New Order"
+        android:tint="@android:color/white"
+        app:fabSize="mini"
+        app:srcCompat="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

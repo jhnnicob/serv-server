@@ -1,0 +1,151 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="colorControlNormal">@color/colorText</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/PoppinsTextViewStyle</item>
+        <item name="android:buttonStyle">@style/PoppinsButtonStyle</item>
+    </style>
+
+    <style name="DefaultButtonStyle">
+        <item name="android:background">@drawable/drawable_serve_ripple_button</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="PoppinsTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="PoppinsTextHeaderStyle" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="PoppinsTextMediumStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="PoppinsTextMediumSemiBoldStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="PoppinsTextSmallStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.Design.TextInputLayout">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textSize">14sp</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="PoppinsButtonStyle" parent="@style/Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="ToolbarTitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="contentPadding">0dp</item>
+        <item name="android:textColor">@color/colorTextHeader</item>
+        <!-- include other attributes you want to change: textColor, textStyle, etc -->
+    </style>
+
+    <style name="ToolbarSubtitleAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="contentPadding">0dp</item>
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="ButtonBorder">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ButtonBorderAccent" parent="ButtonBorder">
+        <item name="android:background">@drawable/drawable_button_border_accent_selector_bg</item>
+    </style>
+
+    <style name="ButtonBorderBlue" parent="ButtonBorder">
+        <item name="android:background">@drawable/drawable_button_border_blue_selector_bg</item>
+    </style>
+
+    <style name="CardHeaderContainerStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">@drawable/drawable_border_bottom_ripple</item>
+    </style>
+
+    <style name="CardHeaderStyle">
+        <item name="background">?selectableItemBackground</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:drawableEnd">@drawable/ic_next</item>
+        <item name="android:drawableTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="CardBodyStyle">
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="CardBodyItemStyle">
+        <item name="android:weightSum">3</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="CardBodyItemTextStyle">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="CardBodyItemTextDisabledStyle">
+        <item name="android:textColor">@color/colorDisabled</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+</resources>

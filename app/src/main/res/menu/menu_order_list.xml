@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:title="@string/title_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:icon="@drawable/ic_search"
+        />
+
+    <item
+        android:id="@+id/navigation_filter"
+        android:title="@string/title_filter"
+        android:icon="@drawable/ic_filter"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/navigation_new_order"
+        android:title="@string/title_new_order" />
+
+    <item
+        android:id="@+id/navigation_repeat_order"
+        android:title="@string/title_repeat_order" />
+
+    <item
+        android:id="@+id/navigation_select_multiple"
+        android:title="@string/title_select_mutiple" />
+
+</menu>

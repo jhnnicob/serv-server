@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_order_from_history"
+        android:title="@string/title_order_from_history" />
+
+    <item
+        android:id="@+id/navigation_add_item"
+        android:title="@string/title_add_item" />
+
+    <item
+        android:id="@+id/navigation_new_order"
+        android:title="@string/title_new_order" />
+</menu>

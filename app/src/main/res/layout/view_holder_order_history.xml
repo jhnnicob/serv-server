@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/PoppinsTextSmallStyle"
+        android:id="@+id/textViewDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_border_zero_radius"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewOrderNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="10/1/2020" />
+
+    <TextView
+        style="@style/PoppinsTextSmallStyle"
+        android:id="@+id/textViewOrderNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_border_zero_radius"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewOrderPrice"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="125111" />
+
+    <TextView
+        style="@style/PoppinsTextSmallStyle"
+        android:id="@+id/textViewOrderPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_border_zero_radius"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewOrderNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="8000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
